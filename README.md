@@ -56,3 +56,4 @@ Power BI Tools such as DAX Functions, measure, calculated and conditional column
 ![image](https://github.com/user-attachments/assets/0368e9f6-3b9d-4f79-bd3c-4f7e946d1f2c)
 
 
+### REPORTS FROM POWERBI
