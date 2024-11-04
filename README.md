@@ -57,3 +57,29 @@ Power BI Tools such as DAX Functions, measure, calculated and conditional column
 
 
 ### REPORTS FROM POWERBI
+![LITA WORKPBI 11_4_2024 6_53_02 PM](https://github.com/user-attachments/assets/ca5a18a3-0576-4439-9205-88eff48fa470)
+
+### REPORT FROM SQL
+ --------------------------------  TOTAL SALES PER PRODUCT------------------------------
+ 
+  Select product, sum (sales) as Total_sales from [dbo].[LITA Capstone Dataset]
+group by product
+|PRODUCT| |TOTAL SALES|
+--------- -------------
+|Shoes|3087500|
+|Jacket|1050000|
+|Hat|1587500|
+|Socks|912500|
+|Shirt|2450000|
+|Gloves|1500000|
+
+NUMBER OF SALES TRANSACTION FOR EACH REGION------------------------------
+
+Select REGION, count(Sales) as Sales_Count from [dbo].[LITA Capstone Dataset]
+group by Region
+|REGION| |SALES COUNT|
+--------  -------------
+|North|12500|
+|East|12500|
+|South|12500|
+|West|12500|
