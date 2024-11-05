@@ -126,4 +126,23 @@ Power BI Tools such as DAX Functions, measure, calculated and conditional column
 |Cus1023|28205|
 |Cus1059|28005|
 |Cus1367|27920|
- 
+
+### PERCENTAGE OF TOTAL SALES BY EACH REGION-------------------
+
+``` SELECT``` 
+ Region,
+ `SUM`(sales) AS total_Sales,
+ (`SUM`(sales)/(`SELECT` `SUM`(sales) `FROM`[dbo].[LITA Capstone Dataset]))*100 AS Sales_Percentage
+ `FROM`
+ [dbo].[LITA Capstone Dataset]
+ `GROUP` `BY`
+ region 
+ `ORDER` `BY` 
+ sales_percentage `DESC`;
+
+|REGION|REGION TOTAL|PERCENTAGE SALES|
+|------|------------|----------------|
+|North|1950000|18.42|
+|East|2450000|23.14|
+|South|4675000|44.15|
+|West|1512500|14.29|
