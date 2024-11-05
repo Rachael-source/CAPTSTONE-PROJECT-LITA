@@ -38,18 +38,11 @@ Power BI Tools such as DAX Functions, measure, calculated and conditional column
 ![image](https://github.com/user-attachments/assets/3cd49a51-b753-4316-940d-c9090e523243) 
 ![image](https://github.com/user-attachments/assets/d47afb17-b858-44dc-84e1-d3216d23efbe)
 
-
-
-
-
 ![image](https://github.com/user-attachments/assets/b08a2039-ba73-4b4d-8019-3d8f0ee401bc)	
 ![image](https://github.com/user-attachments/assets/44cf2dfc-8ff3-42d3-aa92-a5ed5145b16c)
 ![image](https://github.com/user-attachments/assets/0eb55930-88e2-487c-a571-5631623f0725)
 
-
 ### SALES PIVOT TABLES
-
-
 ![image](https://github.com/user-attachments/assets/75cdfa19-0153-413d-ae2b-c556f7133235)
 ![image](https://github.com/user-attachments/assets/d7865f5c-a9fb-46e1-97b8-6f23006888fb)
 ![image](https://github.com/user-attachments/assets/0368e9f6-3b9d-4f79-bd3c-4f7e946d1f2c)
@@ -61,8 +54,8 @@ Power BI Tools such as DAX Functions, measure, calculated and conditional column
 ### REPORT FROM SQL
  --------------------------------  TOTAL SALES PER PRODUCT------------------------------
  
-  Select product, sum (sales) as Total_sales from [dbo].[LITA Capstone Dataset]
-group by product
+  `Select` `product`, `sum` (sales) as Total_sales from [dbo].[LITA Capstone Dataset]
+`group` `by` `product`
 
 |PRODUCT|TOTAL SALES|
 |-------|-----------|
@@ -75,7 +68,7 @@ group by product
 
 ### NUMBER OF SALES TRANSACTION FOR EACH REGION------------------------------
 
-`Select` REGION, `count`(Sales) as Sales_Count from [dbo].[LITA Capstone Dataset]
+`Select` REGION, `count`(Sales) as Sales_Count `from` [dbo].[LITA Capstone Dataset]
 `group` `by` Region`
 
 |REGION|SALES COUNT|
@@ -87,9 +80,9 @@ group by product
 
 ### HIGHEST SELLING PRODUCT BY TOTAL SALES VALUE-----------------------------------------
 
- Select PRODUCT, sum (Sales) as Totalsales from [dbo].[LITA Capstone Dataset]
- group by product 
- order by 2 desc
+ `Select` `PRODUCT`, `sum` (Sales) as Totalsales `from` [dbo].[LITA Capstone Dataset]
+ `group` `by` `product` 
+ `order` `by` 2 `desc`
 
 |PRODUCT|TOTAL SALES|
 |-------|-----------|
@@ -100,10 +93,10 @@ group by product
 |Jacket|1050000|
 |Socks|912500|
 
-TOTAL REVENUE(SALE) PER PRODUCTS----------------------------------
+### TOTAL REVENUE(SALE) PER PRODUCTS----------------------------------
 
- Select Product, sum (Sales) as Total_Revenue from [dbo].[LITA Capstone Dataset]
- group by product 
+ `Select` `Product`, `sum` (Sales) as Total_Revenue `from` [dbo].[LITA Capstone Dataset]
+ `group` `by` `product` 
  
 |PRODUCT|TOTAL REVENUE|
 |-------|-------------|
@@ -115,13 +108,13 @@ TOTAL REVENUE(SALE) PER PRODUCTS----------------------------------
 |Gloves|1500000|
 
 
-TOP 5 CUSTOMERS BY TOTAL PURCHASED AMOUNT------------------------
+### TOP 5 CUSTOMERS BY TOTAL PURCHASED AMOUNT------------------------
 
- select top 5 Customer_id, sum(Sales) as Total_Purchased_Amount
- from
+ `select` `top` 5 Customer_id, sum(Sales) as Total_Purchased_Amount
+ `from`
  [dbo].[LITA Capstone Dataset]
- group by Customer_id
- Order by 2 desc 
+ `group` `by` Customer_id
+` Order ` ```by``` 2 ` desc `
 
 |CUSTOMER ID|TOTAL PURCHASE AMOUNT|
 |-----------|---------------------|
