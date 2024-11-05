@@ -2,16 +2,15 @@
 The sales performance analysis of a retail shope aims to review key insights top selling products, regional performance and monthly sales trends.  The analysis on this project will identify the key issues or opportunities and provide recommendations to achieve specific outcome.
 
 ### BUSINESS PROBLEM/OPPURNITY
-This analysis will review insights that will determine the top sold products. 
-Products that brought low or high sales should be indicated so as to determine their relevance in this business.
-Regions where more revenue was generated, should be given better opportunities in the business line.
+This analysis will review insights that will determine the top sold products 
+that brought low or high sales should be indicated so as to determine their relevance in this business and
+regions where more revenue were generated, should be given better opportunities in the business line.
 ### PROJECT OBJECTIVES
-This is to determine the amount of revenue generated from January to December
-By the end of this analysis, products with low returns should be reconsidered. while those with good return should be promoted.
-This analysis will determine which of the business line is to be focused on. And the area to improve on.
+This is to determine the amount of revenue generated from January to December.
+By the end of this analysis, products with low returns should be reconsidered while those with good return should be promoted.
+This analysis will determine which of the business line is to be focused on and the area to improve on.
 
-### DATA SOURCES
-Accounting software
+### DATA SOURCE
 Sales databases
 ### DATA TOOLS USED (Excel)
 - Pivot tables
@@ -64,8 +63,9 @@ Power BI Tools such as DAX Functions, measure, calculated and conditional column
  
   Select product, sum (sales) as Total_sales from [dbo].[LITA Capstone Dataset]
 group by product
-|PRODUCT| |TOTAL SALES|
---------- -------------
+
+|PRODUCT|TOTAL SALES|
+|-------|-----------|
 |Shoes|3087500|
 |Jacket|1050000|
 |Hat|1587500|
@@ -73,13 +73,61 @@ group by product
 |Shirt|2450000|
 |Gloves|1500000|
 
-NUMBER OF SALES TRANSACTION FOR EACH REGION------------------------------
+### NUMBER OF SALES TRANSACTION FOR EACH REGION------------------------------
 
-Select REGION, count(Sales) as Sales_Count from [dbo].[LITA Capstone Dataset]
-group by Region
-|REGION| |SALES COUNT|
---------  -------------
+`Select` REGION, `count`(Sales) as Sales_Count from [dbo].[LITA Capstone Dataset]
+`group` `by` Region`
+
+|REGION|SALES COUNT|
+|------|-----------|
 |North|12500|
 |East|12500|
 |South|12500|
 |West|12500|
+
+### HIGHEST SELLING PRODUCT BY TOTAL SALES VALUE-----------------------------------------
+
+ Select PRODUCT, sum (Sales) as Totalsales from [dbo].[LITA Capstone Dataset]
+ group by product 
+ order by 2 desc
+
+|PRODUCT|TOTAL SALES|
+|-------|-----------|
+|Shoes|3087500|
+|Shirt|2450000|
+|Hat|1587500|
+|Gloves|1500000|
+|Jacket|1050000|
+|Socks|912500|
+
+TOTAL REVENUE(SALE) PER PRODUCTS----------------------------------
+
+ Select Product, sum (Sales) as Total_Revenue from [dbo].[LITA Capstone Dataset]
+ group by product 
+ 
+|PRODUCT|TOTAL REVENUE|
+|-------|-------------|
+|Shoes|3087500|
+|Jacket|1050000|
+|Hat|1587500|
+|Socks|912500|
+|Shirt|2450000|
+|Gloves|1500000|
+
+
+TOP 5 CUSTOMERS BY TOTAL PURCHASED AMOUNT------------------------
+
+ select top 5 Customer_id, sum(Sales) as Total_Purchased_Amount
+ from
+ [dbo].[LITA Capstone Dataset]
+ group by Customer_id
+ Order by 2 desc 
+
+|CUSTOMER ID|TOTAL PURCHASE AMOUNT|
+|-----------|---------------------|
+|Cus1488|29340|
+|Cus1375|28925|
+|Cus1023|28205|
+|Cus1059|28005|
+|Cus1367|27920|
+ 
