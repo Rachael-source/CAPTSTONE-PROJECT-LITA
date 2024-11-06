@@ -146,3 +146,15 @@ Power BI Tools such as DAX Functions, measure, calculated and conditional column
 |East|2450000|23.14|
 |South|4675000|44.15|
 |West|1512500|14.29|
+
+
+`SELECT` product from [dbo].[LITA Capstone Dataset]
+ `group` `by` product
+ `having` `Sum`(`CASE` 
+ `WHEN` orderdate between '2024-06-01' AND '2024-08-31'
+ `then` 1 `else` 0 `END`)= 0
+ |Product|
+ |-------|
+ |Jacket|
+ |Socks|
+ |Shirt|
